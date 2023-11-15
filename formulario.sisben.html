@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Sisben</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        #container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            overflow-y: auto;
+            overflow-x: auto;
+        }
+
+        #form-container {
+            width: 50%;     
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        #logo {
+            width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        label.inline {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div id="form-container">
+    <img id="logo" src="logo sisben/sisben_iv-logo.jpg" alt="logo sisben">
+    <h1>Formulario Sisben</h1>
+        <br>
+        <h4>Datos de identificación</h4>
+        <br>
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="municipio">Municipio:</label>
+        <input type="text" id="municipio" name="municipio" required>
+
+        <label for="departamento">Departamento</label>
+        <input type="text" id="departamento" name="departamento" required>
+
+        <h4>Datos del solicitante</h4>
+        <br>
+        <label for="primer nombre">Primer nombre:</label>
+        <input type="text" id="primer-nombre" name="primer-nombre" required>
+
+        <label for="segundo nombre">Segundo nombre:</label>
+        <input type="text" id="segundo-nombre" name="segundo-nombre" required>
+
+        <label for="primer apellido">Primer apellido:</label>
+        <input type="text" id="primer-apellido" name="primer-apellido" required>
+
+        <label for="segundo apellido">Segundo apellido:</label>
+        <input type="text" id="segundo-apellido" name="segundo-apellido" required>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required>
+
+        <label for="genero">Género:</label>
+            <label class="inline" for="femenino"><input type="checkbox" id="femenino" name="genero" value="femenino"> Femenino</label>
+            <label class="inline" for="masculino"><input type="checkbox" id="masculino" name="genero" value="masculino"> Masculino</label>
+        <br>
+        <br>
+        <label for="extranjero">Extranjero:</label>
+            <label class="inline" for="extranjero"><input type="checkbox" id="extranjero" name="extranjero" value="extranjero"></label>
+
+        <label for="tipo de documento">Tipo de documento:</label>
+        <select id="tipo de documento" name="tipo-documento" required>
+            <option value="">Seleccionar</option>
+            <option value="cc">Cédula de ciudadanía</option>
+            <option value="ce">Cédula de Extranjeria</option>
+            <option value="passport">Pasaporte</option>
+            <option value="ppt">Permiso por protección temporal</option>
+        </select>
+
+        <label for="numero-documento">Número de documento:</label>
+        <input type="text" id="número-documento" name="número-documento" required>
+
+        <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+
+        <label for="fecha-expedición">Fecha de Expedición de Documento:</label>
+        <input type="date" id="fecha-expedición" name="fecha-expedición" required>
+
+        <label for="pais">Pais:</label>
+        <input type="text" id="pais" name="pais" required>
+
+        <label for="dirección">Dirección de domicilio:</label>
+        <input type="text" id="dirección" name="dirección" required>
+
+        <label for="telefono">Telefono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="correo">Correo Electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <button type="submit">Enviar solicitud</button>
+    </form>
+</div>
+
+</body>
+</html>
